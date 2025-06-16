@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Sign Up</title></head>
+    <body>
+        <h2>ユーザー登録</h2>
+        <from method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">登録</button>
+        </from>
+        <a href="{% url 'login' %}"></a>
+    </body>
+</html>
